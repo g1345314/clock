@@ -18,6 +18,7 @@ import java.awt.image.BufferedImage;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 
+import com.github.clock.Args;
 import com.github.clock.Clock;
 import com.github.clock.UpdateObserver;
 
@@ -124,6 +125,9 @@ public class ClockViewer extends JComponent{
         g2.setStroke(new BasicStroke(4));
         g2.setColor(Color.BLUE);
         drawHand(g2, hourPosition, length * 0.6);
+    }
+    private Color getColor(String colorName){
+	return Color.decode(colorName);
     }
 
     private void drawHand(Graphics2D g2, int dest, double length){
